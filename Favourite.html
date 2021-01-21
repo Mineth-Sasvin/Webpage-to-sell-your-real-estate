@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!--Meta Data-->
+		<meta charset="UTF-8">
+		<meta name="description" content="Jquery, Jason, JqueryUi">	
+		<meta name="author"	content="IIT">	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>Find A Property</title>
+
+		<!--External CSS Files-->
+		<link href="CSS/jquery-ui.css" rel="stylesheet">
+		<link rel="stylesheet" href="CSS/style.css">
+		<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+		
+		<!--Goolge Fonts Import-->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<!--Import Jquery Liberies-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		
+		<!--External JS Files-->
+		<script src="jQuery.js"></script>
+		<script src="jquery-ui.js"></script>
+	</head>
+ 
+	<body>
+		
+		<header>
+				<!--Navigation bar-->
+				<nav>
+					<a href="About.html">About Us</a>
+					<a href="Favourite.html" class="active">Favourites</a>
+					<a href="index.html">Search</a>
+				</nav>
+				
+				<br><br><br>
+				
+				<h1>Add To Favourite</h1>
+				
+				<div class="typewriter">
+					<h2>"Drag and Drop Your Favourites"</h2>
+				</div>
+		</header>
+		<!--Back to top Buton-->
+		<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+			
+			<!--Dispaly 7 Properties As a gellery-->
+			<div class="ui-widget ui-helper-clearfix">
+				<aside>
+					<ul id="gallery" class="gallery ui-helper-reset ui-helper-clearfix">
+						<!--Propety - 1-->
+						<li class="ui-widget-content ui-corner-tr">
+							<h5 class="ui-widget-header">Property 01</h5>
+							<!--Propety - 1 image-->
+							<img src="images/prop1pic1.jpg" alt="High Tatras The highest peak" width="100" height="90">
+							<!--Propety - 1 image Enlarge link-->
+							<a href="images/prop1pic1.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger image</a>
+						</li>
+						
+						<!--Propety - 2-->
+						<li class="ui-widget-content ui-corner-tr">
+							<h5 class="ui-widget-header">Property 02</h5>
+							<!--Propety - 2 image-->
+							<img src="images/prop2pic1.jpg" alt="Cottage by the Green Mountain Lake" width="100" height="90">
+							<!--Propety - 2 image Enlarge link-->
+							<a href="images/prop2pic1.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger image</a>
+						</li>
+						
+						<!--Propety - 3-->
+						<li class="ui-widget-content ui-corner-tr">
+							<h5 class="ui-widget-header">Property 03</h5>
+							<!--Propety - 3 image-->
+							<img src="images/prop3pic1.jfif" alt="Plan to climb" width="100" height="90">
+							<!--Propety - 3 image-->
+							<a href="images/prop3pic1.jfif" title="View larger image" class="ui-icon ui-icon-zoomin">View larger image</a>
+						</li>
+						
+						<!--Propety - 4-->
+						<li class="ui-widget-content ui-corner-tr">
+							<h5 class="ui-widget-header">Property 04</h5>
+							<!--Propety - 4 image-->
+							<img src="images/prop4pic1.jpg" alt="At the top of Kozi kopka" width="100" height="90">
+							<!--Propety - 4 image-->
+							<a href="images/prop4pic1.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger image</a>
+						</li>
+						
+						<!--Propety - 5-->
+						<li class="ui-widget-content ui-corner-tr">
+							<h5 class="ui-widget-header">Property 05</h5>
+							<img src="images/prop5pic1.jpg" alt="At the top of Kozi kopka" width="100" height="90">
+							<a href="images/prop5pic1.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger image</a>
+						</li>
+						
+						<!--Propety - 6-->
+						<li class="ui-widget-content ui-corner-tr">
+							<h5 class="ui-widget-header">Property 06</h5>
+							<img src="images/prop6pic1.jpg" alt="At the top of Kozi kopka" width="100" height="90">
+							<a href="images/prop6pic1.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger image</a>
+						</li>
+						
+						<!--Propety - 7-->
+						<li class="ui-widget-content ui-corner-tr">
+							<h5 class="ui-widget-header">Property 07</h5>
+							<img src="images/prop7pic1.jpg" alt="At the top of Kozi kopka" width="100" height="90">
+							<a href="images/prop7pic1.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger image</a>
+						</li>
+					</ul>
+				</aside>
+				
+				<!--Area to drag and drop the Favourites-->
+				<div id="trash" class="ui-widget-content ui-state-default">
+					<h4 class="ui-widget-header"><span class="ui-icon ui-icon-trash">Favourites</span> Favourites</h4>
+				</div>
+			</div>
+			
+			<!-- Footer -->
+			<footer>
+				<h4>Find Your Property</h4>
+				
+				<p class="footer-links">
+					<a href="index.html">Search</a>
+			·
+					<a href="Favourite.html">Favourites</a>
+					
+			·
+					<a href="About.html">About</a>
+				</p>
+				
+				<h5>Developed By Mineth Sasvin</h5>
+				<h5>Advanced Client Side Web Developement CW</h5>
+		</footer>
+		
+ 
+		<script>
+		
+			$(function() {
+				var $gallery = $( "#gallery" ),
+				$trash = $( "#trash" );
+ 
+			//drag the favourite
+			$( "li", $gallery ).draggable({
+				cancel: "a.ui-icon", 
+				revert: "invalid", 
+				containment: "document",
+				helper: "clone",
+				cursor: "move"
+			});
+ 
+			//drop the favourite
+			$trash.droppable({
+				accept: "#gallery > li",
+				activeClass: "ui-state-highlight",
+				drop: function( event, ui ) {
+				deleteImage( ui.draggable );
+			  }
+			});
+ 
+  
+			$gallery.droppable({
+				accept: "#trash li",
+				activeClass: "custom-state-active",
+				drop: function( event, ui ) {
+				recycleImage( ui.draggable );
+			  }
+			});
+ 
+			//Remove to favourites
+			var recycle_icon = "<a href='#' title='Restore favourite' class='ui-icon ui-icon-refresh'></a>";
+			function deleteImage( $item ) {
+				$item.fadeOut(function() {
+					var $list = $( "ul", $trash ).length ?
+						$( "ul", $trash ) :
+						$( "<ul class='gallery ui-helper-reset'/>" ).appendTo( $trash );
+		 
+					$item.find( "a.ui-icon-trash" ).remove();
+					$item.append( recycle_icon ).appendTo( $list ).fadeIn(function() {
+						$item
+						.animate({ width: "200px" })
+						.find( "img" )
+						.animate({ height: "170px" });
+					});
+				});
+			}
+ 
+			//add to favourites
+			var trash_icon = "<a href='#' title='Delete image'></a>";
+			function recycleImage( $item ) {
+			  $item.fadeOut(function() {
+				$item
+				  .find( "a.ui-icon-refresh" )
+					.remove()
+				  .end()
+				  .css( "width", "120px")
+				  .append( trash_icon )
+				  .find( "img" )
+					.css( "height", "90px" )
+				  .end()
+				  .appendTo( $gallery )
+				  .fadeIn();
+			  });
+			}
+ 
+			//enlarge the added proprty image
+			function viewLargerImage( $link ) {
+			  var src = $link.attr( "href" ),
+				title = $link.siblings( "img" ).attr( "alt" ),
+				$modal = $( "img[src$='" + src + "']" );
+		 
+			  if ( $modal.length ) {
+				$modal.dialog( "open" );
+			  } else {
+				var img = $( "<img alt='" + title + "' width='200px' height='200px' style='display: none; padding: 20px;' />" )
+				  .attr( "src", src ).appendTo( "body" );
+				setTimeout(function() {
+				  img.dialog({
+					title: title,
+					width: 500,
+					modal: true
+				  });
+				}, 1 );
+			  }
+			}
+ 
+   
+			$( "ul.gallery > li" ).click(function( event ) {
+			  var $item = $( this ),
+				$target = $( event.target );
+		 
+			  if ( $target.is( "a.ui-icon-trash" ) ) {
+				deleteImage( $item );
+			  } else if ( $target.is( "a.ui-icon-zoomin" ) ) {
+				viewLargerImage( $target );
+			  } else if ( $target.is( "a.ui-icon-refresh" ) ) {
+				recycleImage( $item );
+			  }
+		 
+			  return false;
+			});
+		  });
+		  
+		  //Get the button:
+			mybutton = document.getElementById("myBtn");
+
+			// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					mybutton.style.display = "block";
+				} 
+				else {
+					mybutton.style.display = "none";
+				}
+			}
+
+			// When the user clicks on the button, scroll to the top of the document
+			function topFunction() {
+				document.body.scrollTop = 0; // For Safari
+				document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+			}
+
+
+		</script>
+	</body>
+</html>

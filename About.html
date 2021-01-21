@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!--Meta Data-->
+		<meta charset="UTF-8">
+		<meta name="description" content="Jquery, Jason, JqueryUi">	
+		<meta name="author"	content="IIT">	
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>About Us</title>
+		
+		<!--Import Jquery Liberies-->
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<!--Import Jquery UI Liberies-->
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		
+		<!--Import External Style Sheets-->
+		<link rel="stylesheet" href="CSS/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  
+	</head>
+
+	<body>
+	
+		<!--Back to top Buton-->
+		<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+	
+		<header>
+				<!--Navigation bar-->
+				<nav>
+					<a href="Contact.html" class="active">About Us</a>
+					<a href="Favourite.html">Favourites</a>
+					<a href="index.html">Search</a>
+				</nav>
+				
+				<br><br><br>
+				
+				<h1>Find Your Property</h1>
+				
+				<div class="typewriter">
+					<h2>"About Us"</h2>
+				</div>
+		</header>
+		
+		<!--jquery accordion--> 
+		
+		<div id="accordion">
+			<!--accordion Slider - 1-->
+			<h6>About Us</h6>
+			<div class="description">
+				<p>
+					We’re the UK’s largest property portal.
+					<br>
+					Our aim is to empower the UK’s decisions around property. Our sophisticated, yet simple, property search platform makes it easy for home hunters to find their ‘happy’.
+					<br>
+					Rightmove plc floated on the London Stock Exchange on 15 March 2006.
+				</p>
+			</div>
+			
+			<!--accordion Slider - 2-->
+			<h6>Our customers are</h6>
+			<div>
+				<p>
+					<ul>
+						<li>estate agents</li>
+						<li>lettings agents</li>
+						<li>new homes developers</li>
+					</ul>
+				</p>
+			</div>
+	  
+			<!--accordion Slider - 3-->
+			<h6>Our Business Model</h6>
+			<div>
+				<p>
+					We are the UK’s number one property portal and the UK’s largest property marketplace. We bring the UK’s largest and most engaged property audience and the largest inventory of properties together in one place. We benefit from strong network effects as our property audience and the properties our customers advertise create a ‘virtuous circle’ enhancing the our value proposition.The our network effect
+				</p>
+			</div>
+		
+			<!--accordion Slider - 4-->
+			<h6>Contact Us</h6>
+			<div>
+				<p>
+					<b><em>Interested in how We can support the growth of your business?</em></b>
+					<br>
+					We would love to talk to you about how we can support your business in promoting your properties and brand in the largest property marketplace. If you are setting up a new business or have years of experience behind you we are here and happy to help you.
+				</p>
+				
+				<!--Social Media Icons Import-->
+				<a href="#" class="fa fa-facebook"></a>
+				<a href="#" class="fa fa-twitter"></a>
+				<a href="#" class="fa fa-google"></a>
+				<a href="#" class="fa fa-linkedin"></a>
+				<a href="#" class="fa fa-youtube"></a>
+				<a href="#" class="fa fa-instagram"></a>
+			</div>
+		</div>
+		
+		<!--Footer-->
+		<footer>
+					<h4>Find Your Property</h4>
+					
+					<p class="footer-links">
+						<a href="index.html">Search</a>
+				·
+						<a href="Favourite.html">Favourites</a>
+						
+				·
+						<a href="About.html">About</a>
+					</p>
+					
+					<h5>Developed By Mineth Sasvin</h5>
+					<h5>Advanced Client Side Web Developement CW</h5>
+			</footer>
+
+		<script>
+			//Convert to Jquery
+			$( function() {
+				$( "#accordion" ).accordion();
+			} );
+			
+			//accordion Slider animation
+			$(function() {
+				var animation = {
+					easing: "easeInOutQuart",
+					duration: 1000
+				};
+			
+				$( "#accordion" ).accordion({
+					animate: animation,
+					collapsible: true
+				});
+			});
+			
+			//Get the button:
+			mybutton = document.getElementById("myBtn");
+
+			// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					mybutton.style.display = "block";
+				} 
+				else {
+					mybutton.style.display = "none";
+				}
+			}
+
+			// When the user clicks on the button, scroll to the top of the document
+			function topFunction() {
+				document.body.scrollTop = 0; // For Safari
+				document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+			}
+			
+		  </script>
+	 
+	</body>
+</html>
